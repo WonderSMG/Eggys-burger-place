@@ -34,7 +34,7 @@ const ResetPwd = () => {
   const onSubmit = async (data) => {
     try {
       const req = await fetch(
-        `${baseUrl}/api/auth/reset-password/${resetToken}`,{
+        `https://eggys-burger-place-1.onrender.com/api/auth/reset-password/${resetToken}`,{
           method:"PUT",
           headers:{
             "Content-Type":"application/json"

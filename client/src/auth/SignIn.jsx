@@ -29,7 +29,7 @@ const SignIn = ({ switchToSignUp }) => {
   });
   const onSubmit = async (data) => {
     try {
-      const req = await fetch(`${baseUrl}/api/auth/sign-in`, {
+      const req = await fetch(`https://eggys-burger-place-1.onrender.com/api/auth/sign-in`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

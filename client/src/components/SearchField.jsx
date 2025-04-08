@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 
 const baseUrl = import.meta.env.VITE_API_URL;
+
 const SearchField = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResult, setSearchResult] = useState([]);
@@ -23,7 +24,7 @@ const SearchField = () => {
     setIsLoading(true);
     try {
       const request = await fetch(
-        `${baseUrl}/api/product/products/search?query=${searchTerm}`
+        `https://eggys-burger-place-1.onrender.com/api/product/products/search?query=${searchTerm}`
       );
       const data = await request.json();
       setSearchResult(data.products || []);
