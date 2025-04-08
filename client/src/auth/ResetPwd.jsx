@@ -39,7 +39,7 @@ const ResetPwd = () => {
           headers:{
             "Content-Type":"application/json"
           },
-          body:JSON.strignify(data)
+          body:JSON.stringify(data)
         }
       );
       const res = await req.json();
