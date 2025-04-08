@@ -22,7 +22,7 @@ const SignIn = ({ switchToSignUp }) => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     reset,
   } = useForm({
     resolver: yupResolver(signInSchema),
@@ -102,7 +102,7 @@ const SignIn = ({ switchToSignUp }) => {
             Forgot Password?
           </Link>
           <MyButton
-            text="Sign In"
+            text={btnText}
             className="w-full h-[40px] font-[500] text-[20px] "
           />
         </form>
