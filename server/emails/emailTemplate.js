@@ -15,7 +15,7 @@ export function resetPasswordEmailTemplate(firstName, resetUrl) {
       <h1 style="color: white; margin: 0; font-size: 28px;">Reset password!</h1>
     </div>
     <div style="background-color: #ffffff; padding: 30px; border-radius: 0 0 10px 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
-      <p style="font-size: 18px; color: #B67B0F;"><strong>Hello ${firstName},</strong></p>
+      <p style="font-size: 18px; color: #0077B5;"><strong>Hello ${firstName},</strong></p>
       <p>Forgot your password?</p>
       <div style="background-color: #f3f6f8; padding: 20px; border-radius: 8px; margin: 20px 0;">
         <h1>You have requested for a password reset from Eggys-place</h1> <p>Please go to this link to reset password</p> <a href=${resetUrl} clicktracking = off>${resetUrl}</a>

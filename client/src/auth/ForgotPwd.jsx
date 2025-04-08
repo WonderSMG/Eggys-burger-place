@@ -24,7 +24,7 @@ const ForgotPwd = () => {
   const handleForgotPwd = async (data) => {
     try {
       const req = await fetch(
-        `https://eggys-burger-place-1.onrender.com/api/auth/forgot-password`,
+        `http://localhost:4040/api/auth/forgot-password`,
         {
           method: "POST",
           headers: {
@@ -41,7 +41,10 @@ const ForgotPwd = () => {
       if(res.success){
         toast.success(res.message)
       }
-    } catch (error) {}
+    } catch (error) {
+      console.log(error.message);
+      
+    }
   };
   return (
     <>
