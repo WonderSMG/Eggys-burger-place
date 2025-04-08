@@ -10,8 +10,7 @@ import { signInSchema } from "../utils/ValidationSchema";
 import { toast } from "sonner";
 import LoadingRing from "../utils/Loader";
 
-const baseUrl = import.meta.env.VITE_API_URL
-
+const baseUrl = import.meta.env.VITE_API_URL;
 
 const SignIn = ({ switchToSignUp }) => {
   const [isReveal, setIsReveal] = useState(false);
@@ -29,13 +28,16 @@ const SignIn = ({ switchToSignUp }) => {
   });
   const onSubmit = async (data) => {
     try {
-      const req = await fetch(`https://eggys-burger-place-1.onrender.com/api/auth/sign-in`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const req = await fetch(
+        `https://eggys-burger-place-1.onrender.com/api/auth/sign-in`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const res = await req.json();
       console.log(res);
       if (!res.success) {
@@ -54,7 +56,7 @@ const SignIn = ({ switchToSignUp }) => {
       }
     }
   };
-  const btnText = isSubmitting ? <LoadingRing/> : "Sign In";
+  const btnText = isSubmitting ? <LoadingRing /> : "Sign In";
   return (
     <>
       <main>
